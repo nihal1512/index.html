@@ -4,13 +4,12 @@
     <title>UPI Intent for Google Pay</title>
   </head>
   <body>
-    <input type="number" id="amount" />
     <button onclick="payWithGPay()">Pay with Google Pay</button>
 
     <script>
       function payWithGPay() {
         const upiId = "sm400239-1@okaxis";
-        const name = "Shubham";
+        const name = "Shubham Mishra";
         const amount = document.getElementById("amount").innerHTML;
         const currency = "INR";
         const transactionNote = "Test Payment";
