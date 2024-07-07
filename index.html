@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>UPI Intent for Google Pay</title>
+  </head>
+  <body>
+    <input type="number" id="amount" />
+    <button onclick="payWithGPay()">Pay with Google Pay</button>
+
+    <script>
+      function payWithGPay() {
+        const upiId = "sm400239-1@okaxis";
+        const name = "Shubham";
+        const amount = document.getElementById("amount").innerHTML;
+        const currency = "INR";
+        const transactionNote = "Test Payment";
+        const transactionId = "1234567890";
+        const transactionRefId = "REF123456789";
+        const returnUrl = "";
+
+        const upiUrl = `upi://pay?pa=${upiId}&pn=${name}&tid=${transactionId}&tr=${transactionRefId}&am=${amount}&cu=${currency}&tn=${transactionNote}&url=${returnUrl}`;
+
+        window.location.href = upiUrl;
+      }
+    </script>
+  </body>
+</html>
